@@ -1,0 +1,285 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Python初识 | 码途钥匙</title><meta name="author" content="码途钥匙"><meta name="copyright" content="码途钥匙"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="编程语言编程语言就像一种魔法语言，让程序员能够与计算机交流，创造出在日常生活和工作中帮助我们的程序。 根据编程语言与计算机沟通的方式，我们通常将编程语言分为低级语言和高级语言：  低级语言更接近计算机硬件，直接操作计算机底层资源和指令。这些语言，如汇编语言，允许程序员直接与硬件通信，控制内存地址和CPU指令。它们主要用于那些需要极致性能优化和硬件控制的应用，例如操作系统的开发。 高级语言是相对于计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python初识">
+<meta property="og:url" content="https://matukey.github.io/2024/05/26/Python%E5%88%9D%E8%AF%86/index.html">
+<meta property="og:site_name" content="码途钥匙">
+<meta property="og:description" content="编程语言编程语言就像一种魔法语言，让程序员能够与计算机交流，创造出在日常生活和工作中帮助我们的程序。 根据编程语言与计算机沟通的方式，我们通常将编程语言分为低级语言和高级语言：  低级语言更接近计算机硬件，直接操作计算机底层资源和指令。这些语言，如汇编语言，允许程序员直接与硬件通信，控制内存地址和CPU指令。它们主要用于那些需要极致性能优化和硬件控制的应用，例如操作系统的开发。 高级语言是相对于计">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-05-26T06:19:46.000Z">
+<meta property="article:modified_time" content="2024-05-26T06:22:23.129Z">
+<meta property="article:author" content="码途钥匙">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://matukey.github.io/2024/05/26/Python%E5%88%9D%E8%AF%86/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Python初识',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: undefined,
+  isToc: true,
+  postUpdate: '2024-05-26 14:22:23'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="码途钥匙"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python初识</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-26T06:19:46.000Z" title="发表于 2024-05-26 14:19:46">2024-05-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-26T06:22:23.129Z" title="更新于 2024-05-26 14:22:23">2024-05-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">Python基础语法</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Python初识"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h2><p>编程语言就像一种魔法语言，让程序员能够与计算机交流，创造出在日常生活和工作中帮助我们的程序。</p>
+<p>根据编程语言与计算机沟通的方式，我们通常将编程语言分为低级语言和高级语言：</p>
+<ul>
+<li><strong>低级语言</strong>更接近计算机硬件，直接操作计算机底层资源和指令。这些语言，如汇编语言，允许程序员直接与硬件通信，控制内存地址和CPU指令。它们主要用于那些需要极致性能优化和硬件控制的应用，例如操作系统的开发。</li>
+<li><strong>高级语言</strong>是相对于计算机硬件而言的，更接近人类自然语言的一种编程语言。使编程更易于理解。这些语言，如Python、Java或C#，通过提供简化的语法，帮助程序员高效地解决问题，而不必担心底层硬件的复杂性。它们广泛应用于软件开发、网页设计、数据库管理和许多其他领域。</li>
+</ul>
+<p>高级语言可以进一步按照代码的执行方式分为编译语言和解释语言：</p>
+<ul>
+<li><strong>编译语言</strong>是指源代码在运行之前需要一个单独的编译过程，将程序完全转换成机器语言。这一过程通常由一个叫做<strong>编译器</strong>的软件完成。编译器会检查全部的源代码并转换成目标机器上直接运行的机器代码。这意味着编译出来的程序执行速度快，因为它直接被CPU执行，无需再次转换或解释。</li>
+<li><strong>解释语言</strong>不通过编译步骤直接将源代码转换为机器代码，而是在程序运行时逐行解释执行。这种语言通常依赖一个<strong>解释器</strong>来读取和执行源代码。解释器执行代码时，一边读取代码，一边进行处理和执行，不需要提前将程序编译成机器语言。</li>
+</ul>
+<h2 id="安装Python解释器"><a href="#安装Python解释器" class="headerlink" title="安装Python解释器"></a>安装Python解释器</h2><p><a target="_blank" rel="noopener" href="https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe"><strong>点击下载Python解释器安装包</strong></a>，双击下载得到的<code>python-3.8.10-amd64.exe</code>，就可以正式开始安装Python解释器了。</p>
+<p><img src="/img%5C1.png" alt="Python安装第一步"></p>
+<p>勾选<code>Add Python 3.8 to PATH</code>，这样可以将Python命令工具所在目录添加到系统Path环境变量中，以后运行Python命令会非常方便。</p>
+<p>点击”Customize installation”进行入下一步，选择要安装的Python组件。</p>
+<p><img src="/img%5C2.png" alt="Python安装第二步"></p>
+<p>没有特殊要求的话，保持默认即可，也就是全部勾选。点击”Next”继续。</p>
+<p>选择好你的安装目录，点击”Install”，等待几分钟就可以完成安装。</p>
+<p>安装完成以后，打开Windows的命令行程序，在窗口中输入python，如果出现Python的版本信息，并看到命令提示符<code>&gt;&gt;&gt;</code>，就说明安装成功了。</p>
+<p>Python程序的书写与执行方式有以下几种：</p>
+<ol>
+<li><p>打开命令行窗口，输入python启动Python交互式解释器。可以逐行执行Python代码并查看结果。</p>
+</li>
+<li><p>使用任何文本编辑器创建一个以.py为扩展名的Python源代码文件。在文件中编写Python代码，保存文件后，可以通过命令行执行Python解释器来运行程序。<br> 执行方式：打开命令行窗口，导航到保存Python源代码文件的目录，然后运行以下命令：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python 文件名.py</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用专门针对Python开发的<strong>集成开发环境（IDE）</strong>，集成开发环境，用来表示辅助程序员开发的应用软件，是它们的一个总称。用来提升程序员的开发效率。  IDE提供了代码编辑、调试、运行等功能，以及更友好的开发环境。</p>
+</li>
+</ol>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>注释是用来在代码中添加说明、解释的文本。注释对于提高代码的可读性、易于理解和维护非常有用。在Python中，有两种常用的注释方式：单行注释和多行注释。</p>
+<h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><p>在Python中，单行注释以<code>#</code>开头，用于在代码中添加对特定语句或行的注释。单行注释的内容将在<code>#</code>符号后的所有字符，直到行末结束。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这是一个单行注释</span></span><br><span class="line">x = <span class="number">5</span>  <span class="comment"># 这是给变量x赋值的语句</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><p>Python 中没有官方的多行注释语法，但通常使用多行字符串来实现多行注释的效果。多行字符串可以使用单引号(<code>&#39;&#39;&#39;</code>)或双引号(<code>&quot;&quot;&quot;</code>)包围，而不赋给任何变量。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">这是一个多行注释</span></span><br><span class="line"><span class="string">它可以跨越多行</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, World!&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">这也是一个多行注释</span></span><br><span class="line"><span class="string">可以使用单引号或双引号</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello again!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="输入与输出"><a href="#输入与输出" class="headerlink" title="输入与输出"></a>输入与输出</h2><p>输入和输出是计算机程序与用户交互的基础。输入允许用户提供信息给程序，而输出让程序将其处理结果显示给用户。</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>在Python中，可以使用<code>input()</code>函数接收用户的输入。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">input</span>(tipmsg)</span><br></pre></td></tr></table></figure>
+
+<p><code>input()</code>函数用于接收用户的输入，该函数会等待用户在命令行中输入内容，并将输入内容作为字符串返回。</p>
+<p>tipmsg表示提示信息，它会显示在控制台上，告诉用户应该输入什么样的内容；如果不写tipmsg，就不会有任何提示信息。</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>在Python中使用<code>print()</code>函数，将括号中的内容显示在命令行中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 只输出一个值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world&#x27;</span>)  </span><br><span class="line"><span class="comment"># 一次性输出多个值，值用逗号隔开</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;first&#x27;</span>,<span class="string">&#x27;second&#x27;</span>,<span class="string">&#x27;third&#x27;</span>)  </span><br></pre></td></tr></table></figure>
+
+<p>一次性输出多个值默认以空格隔开多个值，如果希望改变默认的分隔符，可通过sep参数进行设置。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;first&#x27;</span>, <span class="string">&#x27;second&#x27;</span>, <span class="string">&#x27;third&#x27;</span>, sep=<span class="string">&#x27;|&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>程序是用来处理数据的工具。它可以接收输入数据，对其执行一系列操作，最终生成输出数据。通过使用变量，程序可以存储和操作数据，实现所需的功能。</p>
+<p>数据可以被看作是对事物的描述或表示。它是从真实世界中获取、记录和存储的信息，可能以数字、文本、图像、声音等多种形式存在，用来表示各种事物。</p>
+<p>在Python中，等号(<code>=</code>)这个符号被用作赋值运算符。赋值是指将一个值赋给一个变量。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将5赋值给变量x，从此以后，x就代表整数5，使用x也就是使用5。</span></span><br><span class="line">x = <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<p>Python中的赋值操作使用等号(<code>=</code>)，将右边表达式的结果存储在左边的变量中。这种操作允许我们方便地将计算结果保存到变量中，以便后续使用。</p>
+<p>在编程中，表达式用于计算并生成一个值。任何能够生成一个值的代码片段都可以被称为表达式。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = <span class="number">2</span> + <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则"></a>变量命名规则</h3><p>规则是指明确的、强制性的原则或要求，必须遵守。</p>
+<ul>
+<li><p>Python中变量名由字符、下划线和数字组成，且第一个字符不能是数字。</p>
+</li>
+<li><p>Python中变量名的字母是严格区分大小写的，Age和age是不同的变量。</p>
+</li>
+<li><p>Python中变量名不能和Python中的关键字相同，关键字是Python语言中一些已经被赋予特定意义的单词，这就要求开发者在开发程序时，不能用这些关键字作为变量名。</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> keyword</span><br><span class="line"><span class="built_in">print</span>(keyword.kwlist)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="变量命名规范"><a href="#变量命名规范" class="headerlink" title="变量命名规范"></a>变量命名规范</h3><p>规范是一种约定旨在提供一致性和最佳实践的建议，但不强制要求遵守。</p>
+<ul>
+<li>变量名应该具有描述性，能够清晰地表达变量的用途和含义。</li>
+<li>变量名应该使用小写字母，并使用下划线作为单词之间的分隔符。</li>
+<li>对于常量(不会改变的值)，可以使用全大写字母，并使用下划线作为单词之间的分隔符。</li>
+<li>尽量避免使用单个下划线作为变量名，因为它通常用于表示临时或无用的变量。</li>
+<li>变量名应具有描述性，但也要尽量简洁，不要过于冗长。</li>
+</ul>
+<h3 id="数据类型初识"><a href="#数据类型初识" class="headerlink" title="数据类型初识"></a>数据类型初识</h3><p>数据类型是编程语言中用来定义不同种类数据的分类，不同的数据类型具有不同的特征和操作。</p>
+<h4 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h4><p>在Python中，整数是一种数据类型，用于表示没有小数部分的数字。整数可以是正数、零或负数。使用<code>type()</code>函数可以检查变量的数据类型。Python 3.6及更高版本支持数字分隔符，允许在数字中使用下划线<code>_</code>以提高可读性。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义整数</span></span><br><span class="line">number = <span class="number">78</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印整数和其类型</span></span><br><span class="line"><span class="built_in">print</span>(number)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(number))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用数字分隔符</span></span><br><span class="line">click = <span class="number">1_300_000</span></span><br><span class="line"><span class="built_in">print</span>(click)</span><br></pre></td></tr></table></figure>
+
+<h4 id="浮点数类型"><a href="#浮点数类型" class="headerlink" title="浮点数类型"></a>浮点数类型</h4><p>浮点数类型用于表示带有小数部分的数字。浮点数由整数部分和小数部分组成，并使用小数点来分隔它们。用来存储人的身高，体重，薪资等小数相关的数据，Python中的小数有两种书写形式。</p>
+<ul>
+<li><p>十进制形式：就是我们平时看到的小数形式，例如 34.6、346.0、0.346。</p>
+</li>
+<li><p>科学计数法：当浮点数非常大或非常小时，可以使用科学计数法来表示。科学计数法使用e或E后跟指数来表示10的幂。</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">3.14e2</span>  <span class="comment"># 3.14乘以10的2次方，结果为314.0</span></span><br><span class="line">y = <span class="number">1.23e-3</span>  <span class="comment"># 1.23乘以10的负3次方，结果为0.00123</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>浮点数的精度是有限的，这是由于计算机内部使用二进制表示浮点数，而无法精确表示某些十进制小数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0.1</span> + <span class="number">0.2</span></span><br><span class="line"><span class="built_in">print</span>(x)  <span class="comment"># 结果为0.30000000000000004，而不是0.3</span></span><br></pre></td></tr></table></figure>
+
+<p>在Python中，<code>decimal</code>模块提供了高精度十进制运算的支持。该模块用于进行精确的十进制计算，避免了浮点数运算中可能出现的舍入误差。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> decimal</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建Decimal对象并进行计算</span></span><br><span class="line">num1 = decimal.Decimal(<span class="string">&#x27;0.1&#x27;</span>)</span><br><span class="line">num2 = decimal.Decimal(<span class="string">&#x27;0.2&#x27;</span>)</span><br><span class="line">result = num1 + num2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印结果</span></span><br><span class="line"><span class="built_in">print</span>(result)  <span class="comment"># 输出: 0.3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 舍入操作</span></span><br><span class="line">rounded_sum = result.quantize(decimal.Decimal(<span class="string">&#x27;0.00&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(rounded_sum)  <span class="comment"># 输出: 0.30</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h4><p>字符串在Python中是一种用于存储文本数据的数据类型，可以包含字母、标点、特殊符号以及全球各种文字。</p>
+<p>在Python中，可以使用单引号(<code>&#39;</code>)、双引号(<code>&quot;</code>)或三引号(<code>&#39;&#39;&#39;</code>或<code>&quot;&quot;&quot;</code>)来定义字符串。这些引号之间没有本质的区别，可以根据个人偏好选择使用哪种引号。</p>
+<p>然而，当字符串内容中出现引号时，需要进行特殊处理，以避免引号干扰Python解析字符串的方式。这可以通过在字符串中使用不同类型的引号来实现。</p>
+<p>以下是一些示例，展示了如何处理包含引号的字符串：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用不同类型的引号处理包含引号的字符串</span></span><br><span class="line">str1 = <span class="string">&#x27;She said, &quot;Hello!&quot;&#x27;</span></span><br><span class="line">str2 = <span class="string">&quot;He replied, &#x27;Hi!&#x27;&quot;</span></span><br><span class="line">str3 = <span class="string">&#x27;&#x27;&#x27;They exclaimed, &quot;It&#x27;s amazing!&quot;&#x27;&#x27;&#x27;</span></span><br><span class="line">str4 = <span class="string">&quot;&quot;&quot;I asked, &#x27;What&#x27;s your name?&#x27;&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(str1)  <span class="comment"># 输出: She said, &quot;Hello!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(str2)  <span class="comment"># 输出: He replied, &#x27;Hi!&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(str3)  <span class="comment"># 输出: They exclaimed, &quot;It&#x27;s amazing!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(str4)  <span class="comment"># 输出: I asked, &#x27;What&#x27;s your name?&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>转义字符：转义字符是一种特殊的字符序列，用于表示在字符串中具有特殊意义的字符。在Python中，转义字符使用反斜杠(<code>\</code>)作为前缀，后跟特定的字符，以表示特殊含义。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">1. \&#x27;：表示单引号（&#x27;）。</span></span><br><span class="line"><span class="string">2. \&quot;：表示双引号（&quot;）。</span></span><br><span class="line"><span class="string">3. \\：表示反斜杠（\）。</span></span><br><span class="line"><span class="string">4. \n：表示换行符。</span></span><br><span class="line"><span class="string">5. \t：表示制表符。</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">str1 = <span class="string">&#x27;She said, &quot;It\&#x27;s raining!&quot;&#x27;</span></span><br><span class="line">str2 = <span class="string">&quot;He replied, \&quot;That&#x27;s great!\&quot;&quot;</span></span><br><span class="line">str3 = <span class="string">&quot;This is a\nnew line.&quot;</span></span><br><span class="line">str4 = <span class="string">&quot;This is a\ttab.&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>原始字符串：在字符串的开头加上<code>r</code>前缀，就变成了原始字符串<code>\</code>不会被当作转义字符，所有的内容都保持“原汁原味”的样子。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用原始字符串</span></span><br><span class="line">path = <span class="string">r&#x27;C:\path\to\file.txt&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(path)  <span class="comment"># 输出: C:\path\to\file.txt</span></span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，原始字符串中的最后一个字符如果是反斜杠(<code>\</code>)，会导致语法错误。这是因为反斜杠是用来转义字符的，而在原始字符串中，反斜杠不进行转义，导致解释器认为字符串没有正确结束而产生语法错误。</p>
+<p>当<code>+</code>与<code>*</code>用于数字时表示加法和乘法，当<code>+</code>和<code>*</code>用于字符串时，它们表示字符串的连接和重复。</p>
+<ul>
+<li><p><strong>字符串连接(<code>+</code>)：</strong> 使用<code>+</code>运算符可以将两个字符串连接在一起，形成一个新的字符串。</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">&quot;Hello&quot;</span></span><br><span class="line">str2 = <span class="string">&quot;World&quot;</span></span><br><span class="line">result = str1 + <span class="string">&quot; &quot;</span> + str2</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>字符串重复(<code>*</code>)：</strong> 使用 <code>*</code> 运算符可以将一个字符串重复多次。</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">&quot;abc&quot;</span></span><br><span class="line">result = str1 * <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h4><p>不同的数据类型都有不同的功能，例如：整型可以加减乘除而字符串只能加(拼接)和乘法。 如果想要做转换可遵循一个基本规则：想转换什么类型就让他包裹一下。</p>
+<ul>
+<li><code>int(x)</code>：将x转换为整数类型。如果x是浮点数，将截断小数部分。如果x是字符串，必须表示一个整数值。</li>
+<li><code>float(x)</code>：将x转换为浮点数类型。如果x是整数，将转换为相应的浮点数；如果x是字符串，必须表示一个数值。</li>
+<li><code>str(x)</code>：将x转换为字符串类型。x可以是任意数据类型。</li>
+</ul>
+<h2 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h2><ul>
+<li>声明一个变量<code>name</code>并赋值为你的名字。声明一个变量<code>age</code>并赋值为你的年龄。</li>
+<li>将变量<code>x</code>赋值为整数<code>10</code>，然后将其改为浮点数<code>10.5</code>，最后改为字符串<code>&quot;Hello&quot;</code>。</li>
+<li>使用<code>input()</code>函数获取用户的名字和年龄，并分别存储在变量<code>user_name</code>和<code>user_age</code>中。使用<code>print()</code>函数输出用户的名字和年龄。</li>
+<li>输入商品单价、购买的数量和支付金额，计算应找回多少钱。</li>
+</ul>
+<p>交付要求：</p>
+<ul>
+<li>完成以上所有练习，并将你的代码保存到一个Python文件中，命名为<code>python_basics_homework.py</code>。</li>
+<li>确保每一部分的代码都运行正常，并包含适当的注释。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://matukey.github.io">码途钥匙</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://matukey.github.io/2024/05/26/Python%E5%88%9D%E8%AF%86/">https://matukey.github.io/2024/05/26/Python%E5%88%9D%E8%AF%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://matukey.github.io" target="_blank">码途钥匙</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/05/26/hello-world/" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">码途钥匙</div><div class="author-info__description">专业的IT培训课程，包括Python编程、Web开发、数据科学和机器学习等在线课程。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">编程语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Python%E8%A7%A3%E9%87%8A%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">安装Python解释器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">3.</span> <span class="toc-text">注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E8%A1%8C%E6%B3%A8%E9%87%8A"><span class="toc-number">3.1.</span> <span class="toc-text">单行注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A"><span class="toc-number">3.2.</span> <span class="toc-text">多行注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA"><span class="toc-number">4.</span> <span class="toc-text">输入与输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5"><span class="toc-number">4.1.</span> <span class="toc-text">输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA"><span class="toc-number">4.2.</span> <span class="toc-text">输出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">5.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">5.1.</span> <span class="toc-text">变量命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-number">5.2.</span> <span class="toc-text">变量命名规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%9D%E8%AF%86"><span class="toc-number">5.3.</span> <span class="toc-text">数据类型初识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.3.1.</span> <span class="toc-text">整数类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.3.2.</span> <span class="toc-text">浮点数类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.3.3.</span> <span class="toc-text">字符串类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">5.3.4.</span> <span class="toc-text">数据类型转换</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A"><span class="toc-number">6.</span> <span class="toc-text">作业</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/26/Python%E5%88%9D%E8%AF%86/" title="Python初识">Python初识</a><time datetime="2024-05-26T06:19:46.000Z" title="发表于 2024-05-26 14:19:46">2024-05-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/26/hello-world/" title="Hello World">Hello World</a><time datetime="2024-05-26T04:55:48.769Z" title="发表于 2024-05-26 12:55:48">2024-05-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 码途钥匙</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
